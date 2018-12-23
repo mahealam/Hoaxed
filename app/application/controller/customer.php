@@ -36,16 +36,7 @@ Class Customer extends Controller {
 			header('Location: '.URL.'home');
 		}
 	}
-	public function profile(){
-		$this->loadModel('CustomerModel');
-		if ($this->model->isLoggedIn()  && $this->model->isUserA('Customer')) {
-			$this->loadView('_templates/customer.header');
-			$this->loadView('customer/profile');
-			$this->loadView('_templates/customer.footer');	
-		} else {
-			header('Location: '.URL.'home');
-		}
-	}
+
 
 	public function settings(){
 		$this->loadModel('CustomerModel');
